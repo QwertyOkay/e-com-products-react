@@ -1,0 +1,155 @@
+@import "styles/vars";
+
+.formWrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  border-radius: 8px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    height: 500px;
+    margin: 0 auto;
+  }
+}
+
+.formTitle {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  font-size: 32px;
+  text-align: center;
+
+  text-shadow: -1px -1px 3px #5b5b5b, 2px 2px 4px #4d4d4d;
+  color: #0f0f0f;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 40px;
+  }
+}
+
+.formImg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: linear-gradient(
+      to right,
+      rgba(159, 222, 175, 0.8),
+      rgba(150, 219, 226, 0.8)
+    ),
+    url(../../images/contactus_mobile.png);
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(159, 222, 175, 0.3),
+        rgba(150, 219, 226, 0.3)
+      ),
+      url(../../images/contactus.png);
+  }
+
+  @media screen and (max-width: 1199px) {
+    height: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+  }
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 32px;
+
+  background: var(--color-light);
+  box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+  color: #f1f1f2;
+  position: relative;
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+    padding: 50px;
+  }
+}
+
+.formInput {
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: var(--color-dark);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+
+  @include Animation(border);
+
+  &:focus {
+    border: 2px solid var(--color-gray);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+.formTextarea {
+  composes: formInput;
+
+  resize: none;
+  height: 100px;
+}
+
+.label {
+  position: relative;
+  display: block;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #212121;
+}
+
+.label__name {
+  display: block;
+  margin-bottom: 5px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+.formBtn {
+  width: 100%;
+  padding: 10px 36px;
+  margin-top: 20px;
+
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 0.5rem;
+
+  &:hover,
+  &:focus {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1rem;
+  }
+}
+
+.errorMsg {
+  position: absolute;
+  margin-top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  color: rgb(252, 96, 96);
+}

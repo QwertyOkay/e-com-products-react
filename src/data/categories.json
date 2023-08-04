@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "men’s_cold_weather_gloves",
+    "image": "/img/categories/mencold.jpg",
+    "image_sm": "/img/categories/mencold_sm.jpg"
+  },
+  {
+    "id": 2,
+    "title": "men’s_running_gloves",
+    "image": "/img/categories/menrun.jpg",
+    "image_sm": "/img/categories/menrun_sm.jpg"
+  },
+  {
+    "id": 3,
+    "title": "men’s_cycling_gloves",
+    "image": "/img/categories/mencycling.jpg",
+    "image_sm": "/img/categories/mencycling_sm.jpg"
+  },
+  {
+    "id": 4,
+    "title": "women’s_running_gloves",
+    "image": "/img/categories/womenrun.jpg",
+    "image_sm": "/img/categories/womenrun_sm.jpg"
+  },
+  {
+    "id": 5,
+    "title": "women’s_cycling_gloves",
+    "image": "/img/categories/womencycling.jpg",
+    "image_sm": "/img/categories/womencycling_sm.jpg"
+  },
+  {
+    "id": 6,
+    "title": "men’s_sport_&_recreation_gloves",
+    "image": "/img/categories/mensport.jpg",
+    "image_sm": "/img/categories/mensport_sm.jpg"
+  }
+]

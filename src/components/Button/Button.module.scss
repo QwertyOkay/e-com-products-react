@@ -1,0 +1,162 @@
+@import "styles/vars";
+
+.btn {
+  position: relative;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 1.5rem 0 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: -12px -9px 0px var(--color-dark),
+    0px 0px 0px var(--color-secondary);
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  @include Animation(box-shadow);
+
+  &:after {
+    content: "";
+    z-index: -99;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 59px;
+    width: 100%;
+    background: var(--color-secondary);
+
+    @include Animation(all);
+  }
+
+  &:hover {
+    box-shadow: 12px 9px 0px var(--color-dark),
+      18px 15px 2px var(--color-secondary);
+
+    &:after {
+      width: 0%;
+      height: 50px;
+    }
+  }
+}
+
+.btnCookies {
+  composes: btn;
+
+  color: var(--color-dark);
+  box-shadow: -12px -9px 0px var(--color-light),
+    0px 0px 0px var(--color-secondary);
+
+  &:hover {
+    color: var(--color-primary);
+    box-shadow: 12px 9px 0px var(--color-light),
+      18px 15px 2px var(--color-secondary);
+  }
+
+  &:after {
+    height: 50px;
+  }
+}
+
+.btnHero {
+  composes: btn;
+
+  padding: 0.6rem 1.2rem;
+  font-size: 2rem;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 3rem;
+  }
+}
+
+.btnForm {
+  composes: btn;
+  width: 100%;
+}
+
+.btnContact {
+  composes: btn;
+
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--color-secondary);
+  box-shadow: -12px -9px 0px var(--color-light),
+    0px 0px 0px var(--color-secondary);
+  color: var(--color-dark);
+
+  &:hover {
+    box-shadow: 12px 9px 0px var(--color-light),
+      18px 15px 2px var(--color-secondary);
+  }
+
+  &:after {
+    height: 50px;
+  }
+
+  &:active {
+    box-shadow: -12px -9px 0px var(--color-light),
+      0px 0px 0px var(--color-secondary);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 40px;
+  }
+}
+
+.disabledBtnContact {
+  composes: btnContact;
+  cursor: default;
+
+  &:hover {
+    box-shadow: -12px -9px 0px var(--color-light),
+      0px 0px 0px var(--color-secondary);
+  }
+}
+
+.btnCart {
+  composes: btn;
+
+  height: 50px;
+  margin-bottom: 28px;
+  box-shadow: -12px -9px 0px var(--color-gray),
+    0px 0px 0px var(--color-secondary);
+
+  &:hover {
+    box-shadow: 12px 9px 0px var(--color-gray),
+      18px 15px 2px var(--color-secondary);
+  }
+
+  &:after {
+    height: 50px;
+  }
+}
+
+.btnPayment {
+  composes: btn;
+
+  width: 100%;
+}
+
+.btnBack {
+  composes: btn;
+
+  border: solid 4px var(--color-dark);
+  color: var(--color-dark);
+  box-shadow: none;
+
+  &:after {
+    height: 55px;
+  }
+
+  &:hover {
+    box-shadow: 6px 4px 0px var(--color-dark);
+
+    &:after {
+      width: 100%;
+      height: 55px;
+    }
+  }
+}

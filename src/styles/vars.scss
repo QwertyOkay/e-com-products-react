@@ -1,0 +1,21 @@
+:root {
+  --color-white: #fff;
+  --color-light: #d7d7d9;
+  --color-light-variant: #b6d6f2;
+
+  --color-dark: #09090d;
+  --color-gray: #7c7c7c;
+
+  --color-primary: #592542;
+  --color-secondary: #d98e73;
+
+  --color-accent: #cb6d63;
+  --color-accent-variant: #733a2d;
+
+  --toastify-color-dark: #4f5573;
+}
+
+// Transition with default value
+@mixin Animation($properties...) {
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}

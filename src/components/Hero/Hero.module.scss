@@ -1,0 +1,25 @@
+@import "../../styles/vars.scss";
+
+.hero {
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-gray);
+  background-image: linear-gradient(
+      to right,
+      rgba(124, 124, 124, 0.2),
+      rgba(124, 124, 124, 0.2)
+    ),
+    url(../../images/hero/mobile_hero.jpg);
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(124, 124, 124, 0.2),
+        rgba(124, 124, 124, 0.2)
+      ),
+      url(../../images/hero/hero.jpg);
+  }
+}

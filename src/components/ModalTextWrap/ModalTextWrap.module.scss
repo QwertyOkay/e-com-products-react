@@ -1,0 +1,31 @@
+.modalContent {
+  overflow: scroll;
+  width: 100%;
+  height: 60vh;
+
+  font-size: 16px;
+  line-height: 1.2em;
+
+  @media screen and (min-width: 1200px) {
+    padding: 48px;
+
+    font-size: 20px;
+  }
+}
+
+.modalTitle {
+  margin-bottom: 24px;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.modalContent h3 {
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-gray);
+}
+
+.modalContent p {
+  margin-bottom: 8px;
+  color: var(--color-dark);
+}

@@ -1,0 +1,117 @@
+@import "styles/vars";
+
+.backDrop {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.62);
+
+  @include Animation(opacity, visibility);
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 85vw;
+  height: auto;
+  padding: 44px 24px;
+
+  border-radius: 8px;
+  transform: translate(-50%, -50%) scale(1);
+  color: var(--color-black);
+  background: linear-gradient(
+    to top,
+    rgb(217, 204, 199),
+    rgb(185, 181, 204),
+    rgb(255, 255, 255)
+  );
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @include Animation(transform);
+
+  @media screen and (min-width: 1200px) {
+    width: 55vw;
+    max-height: 90vh;
+  }
+}
+.ageModal {
+  composes: modal;
+
+  display: block;
+  width: auto;
+
+  text-align: center;
+  background: var(--color-secondary-variant);
+  color: var(--color-black);
+  border: 1px solid transparent;
+  box-shadow: rgb(204 219 232) 2px 2px 6px 0px inset,
+    rgb(255 255 255 / 90%) -2px -2px 6px 1px inset;
+
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+  }
+}
+
+.formModal {
+  composes: modal;
+
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  padding: 0 12px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+
+  background: var(--color-light);
+  color: var(--color-black);
+
+  @media screen and (min-width: 1200px) {
+    width: 700px;
+    grid-template-columns: 40% 53%;
+    gap: 7%;
+    padding: inherit;
+  }
+}
+
+.gameModal {
+  composes: modal;
+
+  width: 90vw;
+  height: 90vh;
+  padding: 0;
+
+  background: black;
+}
+
+.payment {
+  composes: modal;
+
+  width: fit-content;
+  background: var(--color-light);
+
+  @media screen and (min-width: 1200px) {
+    &:before {
+      content: " ";
+      animation-fill-mode: both;
+      background: var(--color-gray);
+      height: 100%;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transform-origin: right;
+      width: 50%;
+      box-shadow: 15px 0 30px 0 rgba(0, 0, 0, 0.18);
+    }
+  }
+}
